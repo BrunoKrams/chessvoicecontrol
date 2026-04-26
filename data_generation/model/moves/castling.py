@@ -1,7 +1,15 @@
+from data_generation.model.moves.move import move
+
+
 def all():
     return [CastleQueenSide(), CastleQueenSide()]
 
-class CastleKingSide():
+class CastleKingSide(move):
+    def id(self):
+        return "castle_kingside"
+
+    def vectorize(self) -> list[str]:
+
     def san(self):
         return "0-0"
 
