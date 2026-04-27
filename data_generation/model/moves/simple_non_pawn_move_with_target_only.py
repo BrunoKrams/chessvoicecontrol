@@ -24,16 +24,6 @@ class SimpleNonPawnMoveWithTargetOnly():
     def san(self):
         return f"{self.piece.san}{"x" if self.capture else ""}{self.target_square}"
 
-    def __eq__(self, other: object) -> bool:
-        if not isinstance(other, SimpleNonPawnMoveWithTargetOnly):
-            return False
-        return (self.piece == other.piece
-                and self.target_square == other.target_square
-                and self.capture == other.capture)
-
-    def __hash__(self):
-        return hash((self.piece, self.target_square, self.capture))
-
     def full_texts(self):
         return [f"{self.piece.label} {"schlägt " if self.capture else ""}auf {self.target_square}",
                 f"{self.piece.label} {"schlägt " if self.capture else ""}{self.target_square}",
