@@ -18,7 +18,7 @@ class TestSimpleRookMoveWithFileAndTargetTest(unittest.TestCase):
 
     def test_san_with_takes(self):
         # given
-        move = SimpleRookMoveWithFileAndTarget(File.E, Square.C5, takes=True)
+        move = SimpleRookMoveWithFileAndTarget(File.E, Square.C5, capture=True)
 
         # when
         san = move.san()
@@ -45,7 +45,7 @@ class TestSimpleRookMoveWithFileAndTargetTest(unittest.TestCase):
 
     def test_full_text_with_takes(self):
         # given
-        move = SimpleRookMoveWithFileAndTarget(File.B, Square.C5, takes=True)
+        move = SimpleRookMoveWithFileAndTarget(File.B, Square.C5, capture=True)
 
         # when
         full_texts = move.full_texts()
@@ -65,11 +65,11 @@ class TestSimpleRookMoveWithFileAndTargetTest(unittest.TestCase):
         moves = simple_rook_move_with_file_and_target.all()
 
         # then
-        self.assertIn(SimpleRookMoveWithFileAndTarget(File.B, Square.C5, takes=True), moves)
+        self.assertIn(SimpleRookMoveWithFileAndTarget(File.B, Square.C5, capture=True), moves)
         self.assertIn(SimpleRookMoveWithFileAndTarget(File.B, Square.D6), moves)
         self.assertIn(SimpleRookMoveWithFileAndTarget(File.B, Square.D6), moves)
         self.assertIn(SimpleRookMoveWithFileAndTarget(File.F, Square.E4), moves)
-        self.assertIn(SimpleRookMoveWithFileAndTarget(File.E, Square.C5, takes=True), moves)
+        self.assertIn(SimpleRookMoveWithFileAndTarget(File.E, Square.C5, capture=True), moves)
 
 
 if __name__ == "__main__":

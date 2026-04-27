@@ -12,8 +12,8 @@ def all():
     return result
 
 class SimpleBishopMove(SimpleNonPawnMove):
-    def __init__(self, source_square: Square, target_square: Square, takes:bool = False):
-        super().__init__(Piece.BISHOP, source_square, target_square, takes)
+    def __init__(self, source_square: Square, target_square: Square, capture:bool = False):
+        super().__init__(Piece.BISHOP, source_square, target_square, capture)
 
 if __name__ == '__main__':
     for move in all():

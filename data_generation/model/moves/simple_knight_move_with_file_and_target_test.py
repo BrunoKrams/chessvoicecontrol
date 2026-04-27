@@ -18,7 +18,7 @@ class TestSimpleKnightMoveWithFileAndTargetTest(unittest.TestCase):
 
     def test_san_with_takes(self):
         # given
-        move = SimpleKnightMoveWithFileAndTarget(Square.E4, Square.C5, takes=True)
+        move = SimpleKnightMoveWithFileAndTarget(Square.E4, Square.C5, capture=True)
 
         # when
         san = move.san()
@@ -45,7 +45,7 @@ class TestSimpleKnightMoveWithFileAndTargetTest(unittest.TestCase):
 
     def test_full_text_with_takes(self):
         # given
-        move = SimpleKnightMoveWithFileAndTarget(File.B, Square.C5, takes=True)
+        move = SimpleKnightMoveWithFileAndTarget(File.B, Square.C5, capture=True)
 
         # when
         full_texts = move.full_texts()
@@ -65,11 +65,11 @@ class TestSimpleKnightMoveWithFileAndTargetTest(unittest.TestCase):
         moves = simple_knight_move_with_file_and_target.all()
 
         # then
-        self.assertIn(SimpleKnightMoveWithFileAndTarget(File.B, Square.C5, takes=True), moves)
+        self.assertIn(SimpleKnightMoveWithFileAndTarget(File.B, Square.C5, capture=True), moves)
         self.assertIn(SimpleKnightMoveWithFileAndTarget(File.B, Square.D6), moves)
         self.assertIn(SimpleKnightMoveWithFileAndTarget(File.B, Square.D6), moves)
         self.assertIn(SimpleKnightMoveWithFileAndTarget(File.F, Square.E4), moves)
-        self.assertIn(SimpleKnightMoveWithFileAndTarget(File.E, Square.C5, takes=True), moves)
+        self.assertIn(SimpleKnightMoveWithFileAndTarget(File.E, Square.C5, capture=True), moves)
 
 if __name__ == "__main__":
     unittest.main()

@@ -19,7 +19,7 @@ class SimpleNonPawnMoveWithTargetOnlyTest(unittest.TestCase):
 
     def test_san_with_takes(self):
         # given
-        move = SimpleNonPawnMoveWithTargetOnly(Piece.KING, Square.E4, takes=True)
+        move = SimpleNonPawnMoveWithTargetOnly(Piece.KING, Square.E4, capture=True)
 
         # when
         san = move.san()
@@ -40,7 +40,7 @@ class SimpleNonPawnMoveWithTargetOnlyTest(unittest.TestCase):
 
     def test_full_text_with_takes(self):
         # given
-        move = SimpleNonPawnMoveWithTargetOnly(Piece.KNIGHT, Square.C5, takes=True)
+        move = SimpleNonPawnMoveWithTargetOnly(Piece.KNIGHT, Square.C5, capture=True)
 
         # when
         full_texts = move.full_texts()
@@ -54,11 +54,11 @@ class SimpleNonPawnMoveWithTargetOnlyTest(unittest.TestCase):
         moves = simple_non_pawn_move_with_target_only.all()
 
         # then
-        self.assertIn(SimpleNonPawnMoveWithTargetOnly(Piece.KNIGHT, Square.C5, takes=True), moves)
+        self.assertIn(SimpleNonPawnMoveWithTargetOnly(Piece.KNIGHT, Square.C5, capture=True), moves)
         self.assertIn(SimpleNonPawnMoveWithTargetOnly(Piece.BISHOP, Square.D6), moves)
         self.assertIn(SimpleNonPawnMoveWithTargetOnly(Piece.ROOK, Square.D6), moves)
         self.assertIn(SimpleNonPawnMoveWithTargetOnly(Piece.QUEEN, Square.E4), moves)
-        self.assertIn(SimpleNonPawnMoveWithTargetOnly(Piece.KING, Square.C5, takes=True), moves)
+        self.assertIn(SimpleNonPawnMoveWithTargetOnly(Piece.KING, Square.C5, capture=True), moves)
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ class TestSimpleQueenMove(unittest.TestCase):
 
     def test_san_with_takes(self):
         # given
-        move = SimpleQueenMove(Square.E4, Square.E1, takes = True)
+        move = SimpleQueenMove(Square.E4, Square.E1, capture= True)
 
         # when
         san = move.san()
@@ -38,7 +38,7 @@ class TestSimpleQueenMove(unittest.TestCase):
 
     def test_full_text_with_takes(self):
         # given
-        move = SimpleQueenMove(Square.B7, Square.A8, takes = True)
+        move = SimpleQueenMove(Square.B7, Square.A8, capture= True)
 
         # when
         full_texts = move.full_texts()

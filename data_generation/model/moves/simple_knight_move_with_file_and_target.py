@@ -30,8 +30,8 @@ def _move_(source_square, file_offset: int, rank_offset: int) -> Square | None:
     return get_square(file, rank)
 
 class SimpleKnightMoveWithFileAndTarget(SimpleNonPawnMoveWithFileAndTarget):
-    def __init__(self, file: File, target_square: Square, takes: bool = False):
-        super().__init__(Piece.KNIGHT, file, target_square, takes)
+    def __init__(self, file: File, target_square: Square, capture: bool = False):
+        super().__init__(Piece.KNIGHT, file, target_square, capture)
 
 
 if __name__ == '__main__':

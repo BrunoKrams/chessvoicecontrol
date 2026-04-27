@@ -1,11 +1,19 @@
-from data_generation.model.moves.move import move
-from data_generation.model.pieces import Piece
+from model.moves.pieces import Piece
 
 
 def all():
     return [CastleQueenSide(), CastleQueenSide()]
 
-class CastleKingSide(move):
+class CastleKingSide():
+    def __init__(self):
+        self.piece = Piece.KING
+        self.source_file = None
+        self.source_rank = None
+        self.target_file = None
+        self.target_rank = None
+        self.capture = False
+        self.promoted_to = None
+
     def id(self):
         return "castle_kingside"
 
@@ -16,6 +24,15 @@ class CastleKingSide(move):
         return ["Kurze Rochade", "Rochade am Königsflügel", "Rochade Königsflügel"]
 
 class CastleQueenSide():
+    def __init__(self):
+        self.piece = Piece.KING
+        self.source_file = None
+        self.source_rank = None
+        self.target_file = None
+        self.target_rank = None
+        self.capture = False
+        self.promoted_to = None
+
     def san(self):
         return "0-0-0"
 

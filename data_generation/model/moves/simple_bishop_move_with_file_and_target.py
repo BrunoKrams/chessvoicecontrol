@@ -14,8 +14,8 @@ def all():
     return result
 
 class SimpleBishopMoveWithFileAndTarget(SimpleNonPawnMoveWithFileAndTarget):
-    def __init__(self, file: File, target_square: Square, takes: bool = False):
-        super().__init__(Piece.BISHOP, file, target_square, takes)
+    def __init__(self, file: File, target_square: Square, capture: bool = False):
+        super().__init__(Piece.BISHOP, file, target_square, capture)
 
 
 if __name__ == '__main__':

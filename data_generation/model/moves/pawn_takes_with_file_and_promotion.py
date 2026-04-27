@@ -1,6 +1,4 @@
-from chess import Move
-
-from model.moves.board import File
+from model.moves.board import File, Rank
 from model.moves.pieces import Piece
 
 def all():
@@ -13,33 +11,37 @@ def all():
             result.append(PawnTakesWithFileAndPromotion(file, file + 1, piece))
     return result
 
-class PawnTakesWithFileAndPromotion(Move):
+class PawnTakesWithFileAndPromotion():
     def __init__(self, source_file:File, target_file:File, promoted_to:Piece):
         if not promoted_to.is_promotable:
             raise ValueError(f"{promoted_to} is not promotable")
-        self._source_file = source_file
-        self._target_file = target_file
-        self._promoted_to = promoted_to
+        self.piece = Piece.PAWN
+        self.source_file = source_file
+        self.source_rank = Rank.SEVENTH
+        self.target_file = target_file
+        self.target_rank = Rank.EIGHTTH
+        self.capture = False
+        self.promoted_to = promoted_to
 
     def san(self):
-        return f"{self._source_file}7x{self._target_file}8={self._promoted_to.san}"
+        return f"{self.source_file}7x{self.target_file}8={self.promoted_to.san}"
 
     def full_texts(self):
         result = []
-        prefixes = [f"Bauer {self._source_file} schlägt auf {self._target_file}8",
-                    f"{self._source_file} schlägt auf {self._target_file}8",
-                    f"Der {self._source_file}-Bauer schlägt auf {self._target_file}8",
-                    f"{self._source_file}-Bauer schlägt auf {self._target_file}8",
-                    f"{self._source_file} schlägt auf {self._target_file}8",
-                    f"Bauer {self._source_file} schlägt {self._target_file}8",
-                    f"{self._source_file} schlägt {self._target_file}8",
-                    f"Der {self._source_file}-Bauer schlägt {self._target_file}8",
-                    f"{self._source_file}-Bauer schlägt {self._target_file}8",
-                    f"{self._source_file} schlägt {self._target_file}8",
+        prefixes = [f"Bauer {self.source_file} schlägt auf {self.target_file}8",
+                    f"{self.source_file} schlägt auf {self.target_file}8",
+                    f"Der {self.source_file}-Bauer schlägt auf {self.target_file}8",
+                    f"{self.source_file}-Bauer schlägt auf {self.target_file}8",
+                    f"{self.source_file} schlägt auf {self.target_file}8",
+                    f"Bauer {self.source_file} schlägt {self.target_file}8",
+                    f"{self.source_file} schlägt {self.target_file}8",
+                    f"Der {self.source_file}-Bauer schlägt {self.target_file}8",
+                    f"{self.source_file}-Bauer schlägt {self.target_file}8",
+                    f"{self.source_file} schlägt {self.target_file}8",
                     ]
-        suffixes = [f"Umwandlung {self._article(self._promoted_to)} {self._promoted_to.label}",
-                    f"Umwandlung {self._promoted_to.label}",
-                    f"{self._promoted_to.label}"]
+        suffixes = [f"Umwandlung {self._article(self.promoted_to)} {self.promoted_to.label}",
+                    f"Umwandlung {self.promoted_to.label}",
+                    f"{self.promoted_to.label}"]
         for prefix in prefixes:
             for suffix in suffixes:
                 result.append(f"{prefix}, {suffix}")

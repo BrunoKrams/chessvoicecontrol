@@ -18,7 +18,7 @@ class TestSimpleBishopMoveWithFileAndTargetTest(unittest.TestCase):
 
     def test_san_with_takes(self):
         # given
-        move = SimpleBishopMoveWithFileAndTarget(File.E, Square.C5, takes=True)
+        move = SimpleBishopMoveWithFileAndTarget(File.E, Square.C5, capture=True)
 
         # when
         san = move.san()
@@ -45,7 +45,7 @@ class TestSimpleBishopMoveWithFileAndTargetTest(unittest.TestCase):
 
     def test_full_text_with_takes(self):
         # given
-        move = SimpleBishopMoveWithFileAndTarget(File.B, Square.C5, takes=True)
+        move = SimpleBishopMoveWithFileAndTarget(File.B, Square.C5, capture=True)
 
         # when
         full_texts = move.full_texts()
@@ -65,11 +65,11 @@ class TestSimpleBishopMoveWithFileAndTargetTest(unittest.TestCase):
         moves = simple_bishop_move_with_file_and_target.all()
 
         # then
-        self.assertIn(SimpleBishopMoveWithFileAndTarget(File.B, Square.C5, takes=True), moves)
+        self.assertIn(SimpleBishopMoveWithFileAndTarget(File.B, Square.C5, capture=True), moves)
         self.assertIn(SimpleBishopMoveWithFileAndTarget(File.B, Square.D6), moves)
         self.assertIn(SimpleBishopMoveWithFileAndTarget(File.B, Square.D6), moves)
         self.assertIn(SimpleBishopMoveWithFileAndTarget(File.F, Square.E4), moves)
-        self.assertIn(SimpleBishopMoveWithFileAndTarget(File.E, Square.C5, takes=True), moves)
+        self.assertIn(SimpleBishopMoveWithFileAndTarget(File.E, Square.C5, capture=True), moves)
 
 
 if __name__ == "__main__":

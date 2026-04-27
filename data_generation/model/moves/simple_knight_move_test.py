@@ -18,7 +18,7 @@ class TestSimpleKnightMove(unittest.TestCase):
 
     def test_san_with_takes(self):
         # given
-        move = SimpleKnightMove(Square.E4, Square.C5, takes=True)
+        move = SimpleKnightMove(Square.E4, Square.C5, capture=True)
 
         # when
         san = move.san()
@@ -39,7 +39,7 @@ class TestSimpleKnightMove(unittest.TestCase):
 
     def test_full_text_with_takes(self):
         # given
-        move = SimpleKnightMove(Square.B7, Square.C5, takes=True)
+        move = SimpleKnightMove(Square.B7, Square.C5, capture=True)
 
         # when
         full_texts = move.full_texts()
@@ -53,11 +53,11 @@ class TestSimpleKnightMove(unittest.TestCase):
         moves = simple_knight_move.all()
 
         # then
-        self.assertIn(SimpleKnightMove(Square.B7, Square.C5, takes=True), moves)
+        self.assertIn(SimpleKnightMove(Square.B7, Square.C5, capture=True), moves)
         self.assertIn(SimpleKnightMove(Square.B7, Square.D6), moves)
         self.assertIn(SimpleKnightMove(Square.B7, Square.D6), moves)
         self.assertIn(SimpleKnightMove(Square.F2, Square.E4), moves)
-        self.assertIn(SimpleKnightMove(Square.E4, Square.C5, takes=True), moves)
+        self.assertIn(SimpleKnightMove(Square.E4, Square.C5, capture=True), moves)
 
 
 if __name__ == "__main__":

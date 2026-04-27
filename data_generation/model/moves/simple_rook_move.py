@@ -15,8 +15,8 @@ def all():
 
 
 class SimpleRookMove(SimpleNonPawnMove):
-    def __init__(self, source_square: Square, target_square: Square, takes:bool = False):
-        super().__init__(Piece.ROOK, source_square, target_square, takes)
+    def __init__(self, source_square: Square, target_square: Square, capture:bool = False):
+        super().__init__(Piece.ROOK, source_square, target_square, capture)
 
 
 if __name__ == '__main__':

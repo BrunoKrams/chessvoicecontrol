@@ -16,8 +16,8 @@ def all():
     return result
 
 class SimpleQueenMove(SimpleNonPawnMove):
-    def __init__(self, source_square: Square, target_square: Square, takes:bool = False):
-        super().__init__(Piece.QUEEN, source_square, target_square, takes)
+    def __init__(self, source_square: Square, target_square: Square, capture:bool = False):
+        super().__init__(Piece.QUEEN, source_square, target_square, capture)
 
 if __name__ == '__main__':
     for move in all():

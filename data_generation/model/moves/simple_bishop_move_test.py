@@ -17,7 +17,7 @@ class TestSimpleBishopMove(unittest.TestCase):
 
     def test_san_with_takes(self):
         # given
-        move = SimpleBishopMove(Square.E4, Square.H7, takes = True)
+        move = SimpleBishopMove(Square.E4, Square.H7, capture= True)
 
         # when
         san = move.san()
@@ -38,7 +38,7 @@ class TestSimpleBishopMove(unittest.TestCase):
 
     def test_full_text_with_takes(self):
         # given
-        move = SimpleBishopMove(Square.B7, Square.A8, takes = True)
+        move = SimpleBishopMove(Square.B7, Square.A8, capture= True)
 
         # when
         full_texts = move.full_texts()

@@ -28,8 +28,8 @@ def _move_(source_square, file_offset: int, rank_offset: int) -> Square | None:
     return get_square(file, rank)
 
 class SimpleKingMove(SimpleNonPawnMove):
-    def __init__(self, source_square: Square, target_square: Square, takes: bool = False):
-        super().__init__(Piece.KING, source_square, target_square, takes)
+    def __init__(self, source_square: Square, target_square: Square, capture: bool = False):
+        super().__init__(Piece.KING, source_square, target_square, capture)
 
 
 if __name__ == '__main__':

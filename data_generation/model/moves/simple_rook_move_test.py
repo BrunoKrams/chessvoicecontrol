@@ -17,7 +17,7 @@ class TestSimpleRookMove(unittest.TestCase):
 
     def test_san_with_takes(self):
         # given
-        move = SimpleRookMove(Square.E4, Square.E1, takes=True)
+        move = SimpleRookMove(Square.E4, Square.E1, capture=True)
 
         # when
         san = move.san()
@@ -38,7 +38,7 @@ class TestSimpleRookMove(unittest.TestCase):
 
     def test_full_text_with_takes(self):
         # given
-        move = SimpleRookMove(Square.B7, Square.H7, takes=True)
+        move = SimpleRookMove(Square.B7, Square.H7, capture=True)
 
         # when
         full_texts = move.full_texts()
