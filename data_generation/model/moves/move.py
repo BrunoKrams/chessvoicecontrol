@@ -10,19 +10,20 @@ class Type(enum.Enum):
     STANDARD = 0
     CASTLE_KING_SIDE = 1
     CASTLE_QUEEN_SIDE = 2
+    PROMOTION = 3
 
-@dataclass(frozen=True)
+@dataclass
 class Move(ABC):
     type: Type
     piece: Piece
     source_file: File | None
     source_rank: Rank | None
-    target_file: File
-    target_rank: Rank
+    target_file: File | None
+    target_rank: Rank | None
     capture: bool = False
-    promoted_to: Piece = Piece | None
+    promoted_to: Piece | None = None
 
-
+## TODO add masks for the different types
 
     def __eq__(self, other: Any) -> bool:
         if not isinstance(other, Move):

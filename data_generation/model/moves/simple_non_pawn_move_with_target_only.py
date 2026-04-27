@@ -1,4 +1,5 @@
 from model.moves.board import Square, get_file, get_rank
+from model.moves.move import Move, Type
 from model.moves.pieces import Piece
 
 def all():
@@ -9,8 +10,9 @@ def all():
                 result.append(SimpleNonPawnMoveWithTargetOnly(piece, square, takes))
     return result
 
-class SimpleNonPawnMoveWithTargetOnly():
+class SimpleNonPawnMoveWithTargetOnly(Move):
     def __init__(self, piece: Piece, target_square: Square, capture: bool = False):
+        self.type = Type.STANDARD
         self.piece = piece
         self.source_file = None
         self.source_rank = None

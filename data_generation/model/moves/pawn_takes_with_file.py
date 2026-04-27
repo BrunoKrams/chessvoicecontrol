@@ -1,4 +1,5 @@
 from model.moves.board import Square, File, Rank, get_square, get_file, get_rank
+from model.moves.move import Move, Type
 from model.moves.pieces import Piece
 
 
@@ -16,8 +17,9 @@ def all():
     return result
 
 
-class PawnTakesMoveWithFile():
+class PawnTakesMoveWithFile(Move):
     def __init__(self, file: File, target_square: Square):
+        self.type = Type.STANDARD
         self.piece = Piece.PAWN
         self.source_file = file
         self.source_rank = None

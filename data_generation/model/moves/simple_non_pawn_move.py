@@ -1,8 +1,10 @@
 from model.moves.board import Square, get_rank, get_file
+from model.moves.move import Move, Type
 from model.moves.pieces import Piece
 
-class SimpleNonPawnMove():
+class SimpleNonPawnMove(Move):
     def __init__(self, piece:Piece, source_square: Square, target_square: Square, capture:bool=False):
+        self.type = Type.STANDARD
         self.piece = piece
         self.source_file = get_file(source_square)
         self.source_rank = get_rank(source_square)

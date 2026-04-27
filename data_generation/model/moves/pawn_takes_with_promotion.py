@@ -1,4 +1,5 @@
 from model.moves.board import File, Rank
+from model.moves.move import Move, Type
 from model.moves.pieces import Piece
 
 def all():
@@ -8,10 +9,11 @@ def all():
             result.append(PawnTakesWithPromotion(file, piece))
     return result
 
-class PawnTakesWithPromotion():
+class PawnTakesWithPromotion(Move):
     def __init__(self, file:File, promoted_to:Piece):
         if not promoted_to.is_promotable:
             raise ValueError(f"{promoted_to} is not promotable")
+        self.type = Type.PROMOTION
         self.piece = Piece.PAWN
         self.source_file = None
         self.source_rank = Rank.SEVENTH

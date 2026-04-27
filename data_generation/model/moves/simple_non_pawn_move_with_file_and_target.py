@@ -1,12 +1,14 @@
 from argparse import ArgumentError
 
 from model.moves.board import Square, File, get_rank, get_file
+from model.moves.move import Move, Type
 from model.moves.pieces import Piece
 
-class SimpleNonPawnMoveWithFileAndTarget():
+class SimpleNonPawnMoveWithFileAndTarget(Move):
     def __init__(self, piece: Piece, file:File, target_square: Square, capture: bool = False):
         if piece not in [Piece.KNIGHT, Piece.BISHOP, Piece.ROOK]:
             raise ArgumentError
+        self.type = Type.STANDARD
         self.piece = piece
         self.source_file = file
         self.source_rank = None

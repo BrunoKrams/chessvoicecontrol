@@ -1,11 +1,13 @@
+from model.moves.move import Move, Type
 from model.moves.pieces import Piece
 
 
 def all():
     return [CastleQueenSide(), CastleQueenSide()]
 
-class CastleKingSide():
+class CastleKingSide(Move):
     def __init__(self):
+        self.type = Type.CASTLE_KING_SIDE
         self.piece = Piece.KING
         self.source_file = None
         self.source_rank = None
@@ -25,6 +27,7 @@ class CastleKingSide():
 
 class CastleQueenSide():
     def __init__(self):
+        self.type = Type.CASTLE_QUEEN_SIDE
         self.piece = Piece.KING
         self.source_file = None
         self.source_rank = None
