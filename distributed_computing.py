@@ -1,9 +1,11 @@
 import os
+from pathlib import Path
+
 import ray
 
-from json_generator import JsonGenerator
-from model.moves import all_moves
-from wav_generator import WavGenerator
+from test_data_generation.json_generator import JsonGenerator
+from test_data_generation.model.moves import all_moves
+from test_data_generation.wav_generator import WavGenerator
 
 
 @ray.remote
@@ -46,9 +48,10 @@ def process_move(move, collector):
     )
 
 def main():
-    ray.init()
+    working_dir = str(Path(__file__).resolve().parent)
+    ray.init(address="auto", runtime_env={"working_dir": working_dir})
     moves = all_moves.all()[1:3]
-    collector = MoveCollector.remote()
+    collector = MoveCollector.remote(data_dir=os.path.join(working_dir, "data"))
     futures = [
         process_move.remote(move, collector)
         for move in moves

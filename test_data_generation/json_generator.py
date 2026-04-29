@@ -3,7 +3,7 @@ import json
 import os
 from dataclasses import fields
 
-import mask
+from . import mask
 
 
 class JsonGenerator:

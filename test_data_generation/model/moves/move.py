@@ -3,8 +3,8 @@ from abc import ABC
 from dataclasses import dataclass, fields
 from typing import Any, Dict
 
-from model.moves.board import File, Rank
-from model.moves.pieces import Piece
+from test_data_generation.model.moves.board import File, Rank
+from test_data_generation.model.moves.pieces import Piece
 
 
 class Type(enum.Enum):

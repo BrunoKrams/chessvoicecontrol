@@ -1,8 +1,8 @@
 import unittest
 
-from model.moves.board import Square, File
-from model.moves import simple_rook_move_with_file_and_target
-from model.moves.simple_rook_move_with_file_and_target import SimpleRookMoveWithFileAndTarget
+from test_data_generation.model.moves.board import Square, File
+from test_data_generation.model.moves import simple_rook_move_with_file_and_target
+from test_data_generation.model.moves.simple_rook_move_with_file_and_target import SimpleRookMoveWithFileAndTarget
 
 
 class TestSimpleRookMoveWithFileAndTargetTest(unittest.TestCase):

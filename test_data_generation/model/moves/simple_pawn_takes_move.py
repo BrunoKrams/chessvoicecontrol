@@ -1,6 +1,6 @@
-from model.moves.board import Square, Rank, get_rank, get_file
-from model.moves.move import Move, Type
-from model.moves.pieces import Piece
+from test_data_generation.model.moves.board import Square, Rank, get_rank, get_file
+from test_data_generation.model.moves.move import Move, Type
+from test_data_generation.model.moves.pieces import Piece
 
 
 def all():

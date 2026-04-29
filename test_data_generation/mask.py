@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Dict
 
-from model.moves.move import Type
+from test_data_generation.model.moves.move import Type
 
 
 @dataclass

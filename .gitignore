@@ -45,7 +45,6 @@ htmlcov/
 
 # Generated data
 data/
-test_data_generation/model/
 
 # OS
 .DS_Store

@@ -2,9 +2,9 @@ from typing import Dict, TypedDict
 
 import torch
 
-from model.moves.board import File, Rank
-from model.moves.move import Type
-from model.moves.pieces import Piece
+from test_data_generation.model.moves.board import File, Rank
+from test_data_generation.model.moves.move import Type
+from test_data_generation.model.moves.pieces import Piece
 
 type_mapping = {
     Type.STANDARD: 0,

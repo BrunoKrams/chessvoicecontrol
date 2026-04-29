@@ -1,9 +1,9 @@
 import unittest
 
-from model.moves.board import Square
-from model.moves import simple_non_pawn_move_with_target_only
-from model.moves.simple_non_pawn_move_with_target_only import SimpleNonPawnMoveWithTargetOnly
-from model.moves.pieces import Piece
+from test_data_generation.model.moves.board import Square
+from test_data_generation.model.moves import simple_non_pawn_move_with_target_only
+from test_data_generation.model.moves.simple_non_pawn_move_with_target_only import SimpleNonPawnMoveWithTargetOnly
+from test_data_generation.model.moves.pieces import Piece
 
 
 class SimpleNonPawnMoveWithTargetOnlyTest(unittest.TestCase):

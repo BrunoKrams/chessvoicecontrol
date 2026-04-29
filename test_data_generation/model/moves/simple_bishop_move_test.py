@@ -1,8 +1,8 @@
 import unittest
 
-from model.moves.board import Square
-from model.moves import simple_bishop_move
-from model.moves.simple_bishop_move import SimpleBishopMove
+from test_data_generation.model.moves.board import Square
+from test_data_generation.model.moves import simple_bishop_move
+from test_data_generation.model.moves.simple_bishop_move import SimpleBishopMove
 
 class TestSimpleBishopMove(unittest.TestCase):
     def test_san(self):

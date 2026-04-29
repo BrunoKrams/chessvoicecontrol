@@ -1,8 +1,8 @@
 from argparse import ArgumentError
 
-from model.moves.board import Square, File, get_rank, get_file
-from model.moves.move import Move, Type
-from model.moves.pieces import Piece
+from test_data_generation.model.moves.board import Square, File, get_rank, get_file
+from test_data_generation.model.moves.move import Move, Type
+from test_data_generation.model.moves.pieces import Piece
 
 class SimpleNonPawnMoveWithFileAndTarget(Move):
     def __init__(self, piece: Piece, file:File, target_square: Square, capture: bool = False):

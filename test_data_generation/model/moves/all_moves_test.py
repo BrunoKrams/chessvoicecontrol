@@ -1,6 +1,6 @@
 import unittest
 
-from model.moves import all_moves
+from test_data_generation.model.moves import all_moves
 
 class AllMovesTest(unittest.TestCase):
     def test_all_moves_have_the_required_fields(self):

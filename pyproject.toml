@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chessvoicecontrol"
+version = "0.1.0"
+description = "Distributed chess voice command generation"
+requires-python = ">=3.10"
+
+dependencies = [
+    "ray[default]",
+    "pygame",
+    "torch>=2.0",
+    "yapper-tts",
+    "soundfile",
+    "scipy",
+    "numpy",
+]
+[tool.setuptools.packages.find]
+where = ["."]

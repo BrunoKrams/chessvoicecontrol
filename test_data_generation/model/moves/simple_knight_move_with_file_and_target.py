@@ -1,6 +1,6 @@
-from model.moves.board import Square, get_rank, get_file, get_square, File
-from model.moves.simple_non_pawn_move_with_file_and_target import SimpleNonPawnMoveWithFileAndTarget
-from model.moves.pieces import Piece
+from test_data_generation.model.moves.board import Square, get_rank, get_file, get_square, File
+from test_data_generation.model.moves.simple_non_pawn_move_with_file_and_target import SimpleNonPawnMoveWithFileAndTarget
+from test_data_generation.model.moves.pieces import Piece
 
 def all():
     result = []

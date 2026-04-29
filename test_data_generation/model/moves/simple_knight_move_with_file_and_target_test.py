@@ -1,8 +1,8 @@
 import unittest
 
-from model.moves.board import Square, File
-from model.moves import simple_knight_move_with_file_and_target
-from model.moves.simple_knight_move_with_file_and_target import SimpleKnightMoveWithFileAndTarget
+from test_data_generation.model.moves.board import Square, File
+from test_data_generation.model.moves import simple_knight_move_with_file_and_target
+from test_data_generation.model.moves.simple_knight_move_with_file_and_target import SimpleKnightMoveWithFileAndTarget
 
 
 class TestSimpleKnightMoveWithFileAndTargetTest(unittest.TestCase):

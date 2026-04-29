@@ -1,6 +1,6 @@
-from model.moves.board import Square, get_rank, get_file
-from model.moves.simple_non_pawn_move import SimpleNonPawnMove
-from model.moves.pieces import Piece
+from test_data_generation.model.moves.board import Square, get_rank, get_file
+from test_data_generation.model.moves.simple_non_pawn_move import SimpleNonPawnMove
+from test_data_generation.model.moves.pieces import Piece
 
 
 def all():

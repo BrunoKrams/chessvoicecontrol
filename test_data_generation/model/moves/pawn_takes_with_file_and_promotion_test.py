@@ -1,7 +1,7 @@
 import unittest
-from model.moves.board import File
-from model.moves.pawn_takes_with_file_and_promotion import PawnTakesWithFileAndPromotion
-from model.moves.pieces import Piece
+from test_data_generation.model.moves.board import File
+from test_data_generation.model.moves.pawn_takes_with_file_and_promotion import PawnTakesWithFileAndPromotion
+from test_data_generation.model.moves.pieces import Piece
 
 class PawnTakesWithFileAndPromotionTest(unittest.TestCase):
     def test_san_queen_promotion(self):

@@ -1,7 +1,7 @@
 import unittest
-from model.moves.board import File
-from model.moves.pieces import Piece
-from model.moves.simple_pawn_move_with_promotion import SimplePawnMoveWithPromotion
+from test_data_generation.model.moves.board import File
+from test_data_generation.model.moves.pieces import Piece
+from test_data_generation.model.moves.simple_pawn_move_with_promotion import SimplePawnMoveWithPromotion
 
 
 class TestSimplePawnMoveWithPromotionSan(unittest.TestCase):

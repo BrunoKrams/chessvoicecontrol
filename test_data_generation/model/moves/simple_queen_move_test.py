@@ -1,8 +1,8 @@
 import unittest
 
-from model.moves.board import Square
-from model.moves import simple_rook_move, simple_bishop_move, simple_queen_move
-from model.moves.simple_queen_move import SimpleQueenMove
+from test_data_generation.model.moves.board import Square
+from test_data_generation.model.moves import simple_rook_move, simple_bishop_move, simple_queen_move
+from test_data_generation.model.moves.simple_queen_move import SimpleQueenMove
 
 class TestSimpleQueenMove(unittest.TestCase):
     def test_san(self):

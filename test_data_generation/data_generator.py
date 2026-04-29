@@ -1,8 +1,8 @@
 import logging
 import os
 
-from json_generator import JsonGenerator
-from wav_generator import WavGenerator
+from .json_generator import JsonGenerator
+from .wav_generator import WavGenerator
 
 class DataGenerator():
 

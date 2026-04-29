@@ -1,8 +1,8 @@
 import unittest
 from collections import defaultdict
 
-from model.moves import board
-from model.moves.board import Square, Diagonal, Rank, File, get_rank, get_file, get_square
+from test_data_generation.model.moves import board
+from test_data_generation.model.moves.board import Square, Diagonal, Rank, File, get_rank, get_file, get_square
 
 
 class BoardTest(unittest.TestCase):

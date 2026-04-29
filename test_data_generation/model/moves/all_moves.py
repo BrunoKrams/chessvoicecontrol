@@ -1,4 +1,4 @@
-from model.moves import (
+from test_data_generation.model.moves import (
     castling,
     pawn_takes_with_file_and_promotion,
     pawn_takes_with_file,

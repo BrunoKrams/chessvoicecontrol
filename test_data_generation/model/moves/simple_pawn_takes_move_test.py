@@ -1,7 +1,7 @@
 import unittest
 
-from model.moves.board import Square
-from model.moves.simple_pawn_takes_move import SimplePawnTakesMove
+from test_data_generation.model.moves.board import Square
+from test_data_generation.model.moves.simple_pawn_takes_move import SimplePawnTakesMove
 
 
 class TestSimplePawnTakesMove(unittest.TestCase):

@@ -3,11 +3,11 @@ import unittest
 import torch
 
 import transformer
-from model.moves.board import Square
-from model.moves.castling import CastleKingSide
-from model.moves.pieces import Piece
-from model.moves.simple_non_pawn_move import SimpleNonPawnMove
-from model.moves.simple_pawn_move import SimplePawnMove
+from test_data_generation.model.moves.board import Square
+from test_data_generation.model.moves.castling import CastleKingSide
+from test_data_generation.model.moves.pieces import Piece
+from test_data_generation.model.moves.simple_non_pawn_move import SimpleNonPawnMove
+from test_data_generation.model.moves.simple_pawn_move import SimplePawnMove
 
 
 class TransformeTest(unittest.TestCase):

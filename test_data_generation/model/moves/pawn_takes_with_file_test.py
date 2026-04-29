@@ -1,6 +1,6 @@
 import unittest
-from model.moves.board import File, Square
-from model.moves.pawn_takes_with_file import PawnTakesMoveWithFile
+from test_data_generation.model.moves.board import File, Square
+from test_data_generation.model.moves.pawn_takes_with_file import PawnTakesMoveWithFile
 
 
 class TestPawnTakesMoveWithFile(unittest.TestCase):

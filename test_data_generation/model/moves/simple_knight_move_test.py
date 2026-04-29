@@ -1,8 +1,8 @@
 import unittest
 
-from model.moves.board import Square
-from model.moves import simple_knight_move
-from model.moves.simple_knight_move import SimpleKnightMove
+from test_data_generation.model.moves.board import Square
+from test_data_generation.model.moves import simple_knight_move
+from test_data_generation.model.moves.simple_knight_move import SimpleKnightMove
 
 
 class TestSimpleKnightMove(unittest.TestCase):
