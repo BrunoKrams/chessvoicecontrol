@@ -2,7 +2,7 @@ import concurrent
 import logging
 import os
 
-from datafiles_generator import DataGenerator
+from data_generator import DataGenerator
 from model.moves import all_moves
 from model.moves.move import Move
 
