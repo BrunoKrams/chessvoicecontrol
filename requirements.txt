@@ -1,0 +1,6 @@
+torch==2.11.0
+yapper-tts
+soundfile
+scipy
+numpy
+

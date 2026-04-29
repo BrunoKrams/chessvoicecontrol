@@ -13,5 +13,17 @@ class AllMovesTest(unittest.TestCase):
             for attribute in required_attributes:
                 self.assertTrue(hasattr(move, attribute), f"{attribute} is missing on move {move}")
 
+    def test_all_moves_can_be_pickled(self):
+        # given
+        import pickle
+
+        for move in all_moves.all():
+            # when / then
+            try:
+                pickle.dumps(move)
+            except Exception as e:
+                self.fail(f"Move {move} cannot be pickled: {e}")
+
+
 if __name__ == "__main__":
     unittest.main()

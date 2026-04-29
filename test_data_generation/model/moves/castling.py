@@ -3,7 +3,7 @@ from model.moves.pieces import Piece
 
 
 def all():
-    return [CastleQueenSide(), CastleQueenSide()]
+    return [CastleKingSide(), CastleQueenSide()]
 
 class CastleKingSide(Move):
     def __init__(self):
@@ -13,7 +13,7 @@ class CastleKingSide(Move):
         self.source_rank = None
         self.target_file = None
         self.target_rank = None
-        self.capture = False
+        self.capture = None
         self.promoted_to = None
 
     def id(self):
@@ -25,7 +25,7 @@ class CastleKingSide(Move):
     def full_texts(self) -> list[str]:
         return ["Kurze Rochade", "Rochade am Königsflügel", "Rochade Königsflügel"]
 
-class CastleQueenSide():
+class CastleQueenSide(Move):
     def __init__(self):
         self.type = Type.CASTLE_QUEEN_SIDE
         self.piece = Piece.KING
@@ -33,7 +33,7 @@ class CastleQueenSide():
         self.source_rank = None
         self.target_file = None
         self.target_rank = None
-        self.capture = False
+        self.capture = None
         self.promoted_to = None
 
     def san(self):

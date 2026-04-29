@@ -1,12 +1,14 @@
 from model.moves.board import Square, Rank, get_rank, get_file
+from model.moves.move import Move, Type
 from model.moves.pieces import Piece
 
 
 def all():
     return [SimplePawnTakesMove(square) for square in list(Square) if square not in [*Rank.FIRST.value, *Rank.SECOND.value, *Rank.EIGHTTH.value]]
 
-class SimplePawnTakesMove():
+class SimplePawnTakesMove(Move):
     def __init__(self, target_square: Square):
+        self.type = Type.STANDARD
         self.piece = Piece.PAWN
         self.source_file= None
         self.source_rank = None

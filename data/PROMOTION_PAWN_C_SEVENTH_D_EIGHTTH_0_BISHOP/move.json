@@ -1,0 +1,10 @@
+{
+    "type": "PROMOTION",
+    "piece": "PAWN",
+    "source_file": "C",
+    "source_rank": "SEVENTH",
+    "target_file": "D",
+    "target_rank": "EIGHTTH",
+    "capture": false,
+    "promoted_to": "BISHOP"
+}

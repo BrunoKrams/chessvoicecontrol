@@ -1,0 +1,10 @@
+{
+    "type": "PROMOTION",
+    "piece": "PAWN",
+    "source_file": "F",
+    "source_rank": "SEVENTH",
+    "target_file": "E",
+    "target_rank": "EIGHTTH",
+    "capture": false,
+    "promoted_to": "KNIGHT"
+}

@@ -32,12 +32,10 @@ class PawnTakesWithFileAndPromotion(Move):
         result = []
         prefixes = [f"Bauer {self.source_file} schlägt auf {self.target_file}8",
                     f"{self.source_file} schlägt auf {self.target_file}8",
-                    f"Der {self.source_file}-Bauer schlägt auf {self.target_file}8",
                     f"{self.source_file}-Bauer schlägt auf {self.target_file}8",
                     f"{self.source_file} schlägt auf {self.target_file}8",
                     f"Bauer {self.source_file} schlägt {self.target_file}8",
                     f"{self.source_file} schlägt {self.target_file}8",
-                    f"Der {self.source_file}-Bauer schlägt {self.target_file}8",
                     f"{self.source_file}-Bauer schlägt {self.target_file}8",
                     f"{self.source_file} schlägt {self.target_file}8",
                     ]

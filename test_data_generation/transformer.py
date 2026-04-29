@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, TypedDict
 
 import torch
 
@@ -16,8 +16,8 @@ type_mapping = {
 piece_mapping = {
     None: 0,
     Piece.PAWN: 1,
-    Piece.BISHOP: 2,
-    Piece.KNIGHT: 3,
+    Piece.KNIGHT: 2,
+    Piece.BISHOP: 3,
     Piece.ROOK: 4,
     Piece.QUEEN: 5,
     Piece.KING: 6,
@@ -47,6 +47,10 @@ rank_mapping = {
     Rank.EIGHTTH: 8,
 }
 
+def _create_long_tensor(value: int):
+    return torch.tensor(value, dtype=torch.long)
+
+
 def move_to_targets(move) -> Dict[str, torch.Tensor]:
     return {
         "type": _create_long_tensor(type_mapping[move.type]),
@@ -58,6 +62,3 @@ def move_to_targets(move) -> Dict[str, torch.Tensor]:
         "capture": _create_long_tensor(1 if move.capture else 0),
         "promotion_piece": _create_long_tensor(piece_mapping[move.promoted_to]),
     }
-
-def _create_long_tensor(value: int):
-    return torch.tensor(value, dtype=torch.long)
