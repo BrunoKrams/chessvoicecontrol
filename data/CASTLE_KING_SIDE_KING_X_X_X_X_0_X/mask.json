@@ -1,9 +1,0 @@
-{
-    "piece_mask": 1,
-    "source_file_mask": 0,
-    "source_rank_mask": 0,
-    "target_file_mask": 0,
-    "target_rank_mask": 0,
-    "capture_mask": 0,
-    "promotion_piece_mask": 0
-}
